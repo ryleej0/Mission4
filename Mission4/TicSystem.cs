@@ -24,22 +24,40 @@ public class TicSystem
         return printCommand;
 	}
 
-	public string checkWinner(List<List<char>> board)
+	public char checkWinner(List<List<char>> board)
 	{
-        string winnerCommand = "";
+		for (int i = 0; i < board.Count; i++)
+		{
 
-        for (int i = 0; i < board.Count; i++)
-        {
-        
-        }
+			if (ThreeEqual(board[i][0], board[i][1], board[i][2]))
+			{
+				return board[i][0];
+			}
 
-		return winnerCommand;
+			if (ThreeEqual(board[0][i], board[1][i], board[2][i]))
+			{
+				return board[0][i];
+			}
+		}
+
+		if (ThreeEqual(board[0][0], board[1][1], board[2][2]))
+		{
+			return board[0][0];
+		}
+
+		if (ThreeEqual(board[0][2], board[1][1], board[2][0]))
+		{
+			return board[0][2];
+		}
+
+		return ' ';
 	}
 
-    private bool threeEqual(string a, string b, string c) 
-    {
-        return a != " ";
-    }
+	private bool ThreeEqual(char a, char b, char c)
+	{
+		return !char.IsDigit(a) && a == b && b == c;
+	}
+
 
 }
 
