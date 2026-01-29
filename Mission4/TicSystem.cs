@@ -19,7 +19,7 @@ public class TicSystem
             linePrintStorage.Add(linePrintCommand);
         }
 
-        printCommand = linePrintStorage[0] + $"-----------" + linePrintStorage[1] + "-----------" + linePrintStorage[2];
+        printCommand = linePrintStorage[0] + $"\n-----------\n" + linePrintStorage[1] + "'\n-----------\n" + linePrintStorage[2];
 
         return printCommand;
 	}
