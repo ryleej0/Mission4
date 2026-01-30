@@ -7,4 +7,5 @@ riderModule.iml
 *.suo
 bin/
 obj/
+.idea/
 
